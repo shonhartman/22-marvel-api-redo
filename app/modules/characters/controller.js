@@ -52,19 +52,19 @@ class CharactersController {
 
   getData() {
 		this._$http
-			.get(`http://gateway.marvel.com:80/v1/public/characters?name=${this.name}?apikey=2a4fd1138bd131ee49b25af36d5f763a`)
+			.get(`http://gateway.marvel.com:80/v1/public/characters?name=${this.name}&apikey=2a4fd1138bd131ee49b25af36d5f763a`)
 			.then((response) => {
 				console.log(response);
-				this.id = response.data.results[0].id;
-				this.description = response.data.results[0].description;
-				this.image = `${response.data.results[0].thumbnail.path}.${response.data.data.results[0].thumbnail.extension}`;
+				this.id = response.data.data.results[0].id;
+				this.description = response.data.data.results[0].description;
+				this.image = `${response.data.data.results[0].thumbnail.path}.${response.data.data.results[0].thumbnail.extension}`;
 
 
 				this._$http
 					.get(`http://gateway.marvel.com/v1/public/characters/${this.id}/events?apikey=2a4fd1138bd131ee49b25af36d5f763a`)
 					.then((response) => {
 						console.log(response);
-						this.events = response.data.results;
+						this.events = response.data.data.results;
 					})
 			})
 
