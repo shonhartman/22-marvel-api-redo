@@ -7,12 +7,18 @@
 .image {
   top: 0;
   left: 2%;
-  border: 3px solid black;
+  width: 75%;
+  border: 5px solid black;
   border-radius: 5px;
   float: left;
   margin: 20px 0 0 6.6%;
   position: absolute;
   z-index: 2;
+}
+
+.event-image {
+  width: 25%;
+  float: left;
 }
 
 .name {
@@ -30,7 +36,7 @@
 }
 
 .left-column {
-  // background-color: #666;
+  background-color: #666;
   width: 24%;
   min-width: 300px;
   height: 900px;
@@ -41,7 +47,7 @@
 
 .right-column {
   float: right;
-  // background-color: #999;
+  background-color: #999;
   width: 64%;
   min-width: 150px;
   height: 880px;
@@ -52,31 +58,4 @@
 #event-heading {
   margin: 100px 0 0 5%;
   color: #333;
-}
-
-ul {
-  list-style: none;
-  padding: 25px 0 0 5%;
-}
-
-a {
-  text-decoration: none;
-  color: #333;
-  font-size: 0.65rem;
-}
-
-li {
-  float: left;
-}
-
-li:nth-child(1), {
-  margin-right: 2%;
-}
-
-li:nth-child(2), {
-  margin-right: 2%;
-}
-
-li:nth-child(3), {
-  margin-right: 2%;
 }

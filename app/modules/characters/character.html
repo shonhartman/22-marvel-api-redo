@@ -1,13 +1,21 @@
 
 
-  <img ng-src="{{ charCtrl.image }}">
-  <h1>{{ charCtrl.name }}</h1>
-  <p>{{ charCtrl.description}}</p>
 
-<h3>Events</h3>
-<div class="events">
-  <div class="event" ng-repeat="event in charCtrl.events">
-      <img class="event-image" ng-src="{{ charCtrl.eventImage(event) }}">
-    <h2>{{ event.title }}</h2>
+
+<div class="container">
+  <div class="left-column">
+    <img class="image" ng-src="{{ charCtrl.image }}">
+    <h1>{{ charCtrl.name }}</h1>
+    <p class="description">{{ charCtrl.description}}</p>
+  </div>
+
+  <div class="right-column">
+    <h3 id="event-heading">Events</h3>
+    <div class="events">
+      <div class="event" ng-repeat="event in charCtrl.events">
+          <img class="event-image" ng-src="{{ charCtrl.eventImage(event) }}">
+        <h2>{{ event.title }}</h2>
+      </div>
+    </div>
   </div>
 </div>
