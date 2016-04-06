@@ -35,59 +35,6 @@
 
 */
 
-// class EventsController {
-//
-// 	constructor($http, $stateParams) {
-//     this._$http = $http;
-// 		this.id = $stateParams.id;
-// 		this.getData();
-// 	}
-//
-//   getData() {
-// 		this._$http
-//       .get(`http://gateway.marvel.com:80/v1/public/events?apikey=2a4fd1138bd131ee49b25af36d5f763a
-// ${this.id}`)
-//       .then ((response) => {
-//       console.log(response);
-//       this.id = response.data.id;
-//
-//     });
-//   }
-//
-// }
-//
-// export default EventsController
-
-
-// class EventsController {
-//
-// 	constructor($http, $stateParams) {
-//     this._$http = $http;
-// 		this.id = $stateParams.id;
-//
-// 		this.getData();
-// 	}
-//
-//   getData() {
-//
-// 		this._$http
-// 			.get(`http://gateway.marvel.com:80/v1/public/events/${this.id}?apikey=2a4fd1138bd131ee49b25af36d5f763a`)
-// 			.then((response) => {
-//
-// 				this.title = response.data.data.results[0].title;
-// 				this.description = response.data.data.results[0].description;
-// 				this.image = `${response.data.data.results[0].thumbnail.path}.${response.data.data.results[0].thumbnail.extension}`;
-// 		});
-// 		this._$http
-// 			.get(`http://gateway.marvel.com:80/v1/public/events/${this.id}/characters?apikey=6e7bd33438a14b84d91097cd3cfc46b5`)
-// 			.then((response) => {
-// 				this.characters = response.data.data.results;
-// 		});
-//   }
-// }
-//
-// export default EventsController;
-
 class EventsController {
 
 	constructor($http, $stateParams) {
@@ -97,7 +44,7 @@ class EventsController {
 
   getData() {
 		this._$http
-		.get(`http://gateway.marvel.com:80/v1/public/events/${this.param}&apikey=1c51377e8242564595ee97800ae287c7`)
+		.get(`http://gateway.marvel.com:80/v1/public/events/${this.param}&apikey=2a4fd1138bd131ee49b25af36d5f763a`)
 		.then((response) => {
 			console.log(response);
 
