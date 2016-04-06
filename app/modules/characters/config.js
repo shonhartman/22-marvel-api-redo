@@ -15,6 +15,13 @@
           we use require() to include templates!
 */
 function config($stateProvider) {
+  $stateProvider
+  .state('characters', {
+    url: '/characters/:name',
+    controller: "CharacterController as charCtrl",
+    template: require('./character.html')
+
+  });
 }
 
 export default config;

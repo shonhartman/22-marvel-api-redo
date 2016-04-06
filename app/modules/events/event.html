@@ -1,1 +1,29 @@
-<h1></h1>
+<!-- <h1></h1>
+
+<div class="photo" ng-repeat="photo in marsCtrl.photos">
+  <h1>{{ photo.camera.full_name }}</h1>
+  <img ng-src="{{ photo.img-source }}" alt="" />
+</div> -->
+
+<div class="event">
+  <img ng-src="{{eventCtrl.image}}" class="event--image">
+  <h1 class="event--title">{{eventCtrl.title}}</h1>
+  <p class="event--description">{{eventCtrl.description}}</p>
+</div>
+
+<div class="characters">
+
+  <ul class="characters--list">
+
+    <li ng-repeat="character in eventCtrl.characters" class="characters--character">
+
+      <a class="characters--link" ui-sref="characters({character: character.name})">
+        <img ng-src="{{ character.thumbnail.path + '.' + character.thumbnail.extension }}" class="characters--image">
+        <h2 class="characters--name">{{character.name}}</h2>
+      </a>
+
+    </li>
+
+  </ul>
+
+</div>
