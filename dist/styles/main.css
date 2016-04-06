@@ -23,11 +23,12 @@ h1 {
 .container {
   width: 90%;
   height: 1000px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background-color: black; }
 
 .image {
   top: 0;
-  left: 2%;
+  left: 10%;
   width: 75%;
   border: 5px solid black;
   border-radius: 5px;
@@ -37,24 +38,23 @@ h1 {
   z-index: 2; }
 
 .event-image {
-  width: 25%;
+  width: 10%;
   float: left; }
 
 .name {
   padding: 310px 0 0 0;
   color: #333;
   text-align: center;
-  min-width: 300px; }
+  width: 75%; }
 
 .description {
-  width: 50%;
-  min-width: 300px;
+  width: 75%;
   padding-left: 14%;
   text-align: center; }
 
 .left-column {
   background-color: #666;
-  width: 24%;
+  width: 25%;
   min-width: 300px;
   height: 900px;
   float: left;
@@ -64,7 +64,7 @@ h1 {
 .right-column {
   float: right;
   background-color: #999;
-  width: 64%;
+  width: 75%;
   min-width: 150px;
   height: 880px;
   margin: 20px 0 0 25.2%;
